@@ -1,0 +1,253 @@
+
+.main-header
+{
+    &__container
+    {
+        min-width: 320px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    &__cross
+    {
+        display: none;
+    }
+
+    &__navigation-list
+    {
+        padding: 15px 80px;
+    }
+
+    &__list-item
+    {
+        font-family: @font-family-bold;
+
+        display: inline-block;
+
+        a
+        {
+            &:hover
+            {
+                color: @light-blue;
+            }
+
+            &:active
+            {
+                color: @active;
+            }
+        }
+
+        &--active-link
+        {
+            a
+            {
+                color: @light-brown;
+
+                &:hover
+                {
+                    cursor: default;
+
+                    color: @brown;
+
+                    &:active
+                    {
+                        color: @active;
+                    }
+                }
+            }
+        }
+
+        &--na
+        {
+            a
+            {
+                cursor: default;
+
+                opacity: .3;
+                &:hover
+                {
+                    color: @black;
+                }
+            }
+        }
+    }
+
+
+
+    &__list-item--left
+    {
+        float: left;
+
+        margin-right: 11%;
+    }
+
+    &__list-item--right
+    {
+        float: right;
+
+        margin-left: 11%;
+    }
+
+
+    &__icon-cross
+    {
+        display: none;
+    }
+}
+
+
+/*
+tablet style
+*/
+
+@media ( max-width: 1280px)
+{
+    .main-header
+    {
+        &__navigation
+        {
+            position: relative;
+        }
+
+        &__icon-cross
+        {
+            display: none;
+        }
+
+        &__navigation-list
+        {
+            padding: 15px 3.9%;
+        }
+
+        &__list-item--left
+        {
+            float: left;
+
+            margin-right: 8.5%;
+        }
+
+        &__list-item--right
+        {
+            float: right;
+
+            margin-left: 8.5%;
+        }
+    }
+
+    /*
+  phone style
+  */
+    @media (max-width: 768px)
+    {
+        .main-header
+        {
+            &__container
+            {
+                width: 100%;
+            }
+
+            &__icon-cross
+            {
+                position: absolute;
+                z-index: 20;
+                top: 16px;
+                right: 18px;
+
+                display: block;
+
+                border: none;
+                background: transparent;
+
+                fill: @white;
+            }
+
+            &__navigation-list
+            {
+                padding: 0;
+
+                li
+                {
+                    display: block;
+
+                    text-align: center;
+
+                    border-top: 1px solid @border-blue;
+                    border-bottom: 1px solid @border-dark-blue;
+                    background: @light-blue;
+                    a
+                    {
+                        line-height: 55px;
+
+                        display: block;
+
+                        color: @white;
+                    }
+                }
+            }
+
+            &__list-item
+            {
+                position: relative;
+                z-index: 5;
+
+                &:hover
+                {
+                    background: @blue;
+                    a
+                    {
+                        color: @white;
+
+                        &:active
+                        {
+                            color: @active;
+                        }
+                    }
+                }
+
+                &--active-link
+                {
+                    &:hover
+                    {
+                        background: @light-blue;
+                        a
+                        {
+                            color: @white;
+                        }
+                    }
+                }
+
+                &--na
+                {
+                    &:hover
+                    {
+                        background: @light-blue;
+                        a
+                        {
+                            color: @white;
+
+                            &:active
+                            {
+                                color: @white;
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            &__list-item--left
+            {
+                float: none;
+
+                margin-right: 0;
+            }
+
+            &__list-item--right
+            {
+                float: none;
+
+                margin-left: 0;
+            }
+        }
+    }
+}

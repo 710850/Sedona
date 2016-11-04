@@ -1,0 +1,269 @@
+.popup-window
+{
+    position: relative;
+    top: 0;
+
+    width: 568px;
+    margin: 0 auto;
+
+    background: @white;
+    box-shadow: 0 7px 15px 0 rgba(0, 1, 1, .15);
+
+    &__title
+    {
+        font-family: @font-family-bold;
+        font-size: @font-size-title-big;
+        line-height: @line-height;
+
+        width: 568px;
+        padding: 30px 30px;
+
+        text-align: center;
+
+        color: @white;
+        background: @light-brown;
+
+        &:hover
+        {
+            background: @brown;
+        }
+
+        &:active
+        {
+            color: @active;
+        }
+    }
+
+    &__booking-form-wrap
+    {
+        position: absolute;
+
+        padding: 65px 55px 55px 55px;
+
+        background: @white;
+        -webkit-box-shadow: 0 0 15px 5px rgba(0,1,1,.2);
+           -moz-box-shadow: 0 0 15px 5px rgba(0,1,1,.2);
+                box-shadow: 0 0 15px 5px rgba(0,1,1,.2);;;;
+    }
+
+    &__booking-form
+    {
+        font-family: @font-family;
+        font-size: @font-size;
+        line-height: @line-height;
+
+        color: @black;
+    }
+
+    &__input-label
+    {
+        font-family: @font-family-bold;
+        line-height: 32px;
+
+        float: left;
+
+        margin-right: 48px;
+    }
+
+    &__calendar-btn
+    {
+        line-height: 32px;
+
+        float: right;
+
+        cursor: pointer;
+        vertical-align: bottom;
+    }
+
+    &__icon-calendar
+    {
+        width: 23px;
+        height: 23px;
+
+        fill: @active;
+
+        &:hover
+        {
+            fill: @black;
+        }
+
+        &:active
+        {
+            fill: @light-blue;
+        }
+    }
+
+    &__input-date
+    {
+        font-family: @font-family-bold;
+
+        float: right;
+
+        width: 280px;
+        padding: 5px;
+
+        cursor: pointer;
+
+        border: solid 2px transparent;
+
+        &:hover
+        {
+            background: @input-bg;
+        }
+
+        &:focus
+        {
+            border: 2px solid @input-border;
+            background: none;
+        }
+    }
+
+    &__booking-row
+    {
+        margin-bottom: 55px;
+
+        &--right
+        {
+            float: right;
+        }
+
+        &--left
+        {
+            float: left;
+        }
+    }
+
+    &__visitors-quantity
+    {
+        font-family: @font-family-bold;
+        line-height: 32px;
+
+        width: 45px;
+
+        text-align: center;
+        vertical-align: bottom;
+
+        border: 0;
+
+        &:hover
+        {
+            background: @input-bg;
+        }
+    }
+
+    &__quantity-change-btn
+    {
+        padding: 0 10px;
+
+        fill: @active;
+
+        &:hover
+        {
+            fill: @black;
+        }
+
+        &:active
+        {
+            fill: @light-blue;
+        }
+    }
+
+    &__quantity-change-icon
+    {
+        width: 10px;
+    }
+
+
+    &__find-btn
+    {
+        font-family: @font-family-bold, sans-serif;
+        font-size: @font-size-title;
+        font-weight: 400;
+        line-height: 56px;
+
+        display: block;
+
+        width: 460px;
+        margin: 0 auto;
+
+        cursor: pointer;
+        text-transform: uppercase;
+
+        color: @white;
+        border: none;
+        background: @light-blue;
+
+        &:hover
+        {
+            background: @blue;
+        }
+
+        &:active
+        {
+            color: @active;
+        }
+    }
+}
+
+
+/*
+phone style
+*/
+
+@media(max-width: 768px)
+{
+    .popup-window
+    {
+        width: 100%;
+
+
+        &__title
+        {
+            font-size: @font-size-title-little;
+
+            width: 100%;
+        }
+
+        &__booking-form-wrap
+        {
+            position: static;
+
+            padding: 30px 30px 50px ;
+        }
+
+        &__booking-row
+        {
+            margin-bottom: 20px;
+        }
+
+        &__input-label
+        {
+            display: block;
+            float: none;
+
+            margin-right: 0;
+            margin-bottom: 15px;
+        }
+
+        &__input-date
+        {
+            font-size: @font-size;
+
+            display: block;
+            float: none;
+
+            width: 85%;
+            margin-right: 12%;
+            padding: 0;            ;
+        }
+
+        &__find-btn
+        {
+            width: 100%;
+            margin: 0;
+        }
+    }
+}
+
+
+
